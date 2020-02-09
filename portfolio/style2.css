@@ -5,8 +5,7 @@ body {
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5;
-        color: 
-        #212529;
+        color: #212529;
         text-align: left;
     }
 
@@ -29,7 +28,7 @@ footer{  background-position:
        center,
         bottom,
         left bottom;
-    margin-top:700px;box-shadow: rgb(red, rgb(60, 204, 60), blue) 0.5rem;}
+        margin-top:700px;box-shadow: rgb(red, rgb(60, 204, 60), blue) 0.5rem;}
 .header{border:solid 5px ;
     font-style: var(--purple);
     padding: 2px;
@@ -71,7 +70,7 @@ table,th{margin-left: 0;width: 70%; margin-top: 500px;
 #skills{box-sizing: 50px; }
 .myclass{widows: 50%;}
 .th1foto1{ width:60%; background-image: cover;}
-.lebenslauf{float: left; font-size: 40pt;}
+.lebenslauf{float: left; font-size: 40px;}
     .list-group{display:inline-block; float:right; font-size:80pt; font-weight:bolder;}
     
     .ic {
@@ -82,5 +81,5 @@ table,th{margin-left: 0;width: 70%; margin-top: 500px;
     .oben1{
         display: flex;
         justify-content: center;
-        background-color: brown;
+        background-color: rgb(83, 100, 74);
     }
