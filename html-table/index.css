@@ -15,7 +15,7 @@ table     {border :3px red;
           text-align: left;
           padding: 3px;
   }
-  th{
+  th{border: 1px solid blue;
     padding:10px;
   }
   tr:nth-child(even) {
@@ -28,3 +28,9 @@ table     {border :3px red;
   tbody{ 
         padding:0px;
   }
+
+ .icon {margin-left: 10px;
+        
+  
+  }
+ button .loc-icon{background-color:skyblue;}
