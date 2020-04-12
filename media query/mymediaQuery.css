@@ -1,0 +1,159 @@
+/*
+ media query format
+ @media only|not media-type and (some size) { ....}
+*/
+@media all{
+/* common code */
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 'topmenu topmenu topmenu topmenu '
+                         'asidemenu content content aside2'
+                          'footer footer footer footer';
+    color: white;
+    background-color: rgb(49, 45, 45);
+}
+
+.top-menu a {
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    border-radius: 10%;
+}
+div img {
+    width: 200px;
+    height: 200px;
+    float:left;
+}
+.content{
+    grid-area: content;
+}
+.aside{
+    width:10%;
+    grid-area:asidemenu;
+}
+.aside a{
+    border: 2px solid white;
+    border-radius: 10%;
+    color:white;
+    
+}
+.aside2 a{
+    border: 2px solid white;
+    border-radius: 10%;
+    color:white;
+}
+.aside2{
+     width:10%;
+     grid-area: aside2;
+}
+.top-menu{
+    grid-area: topmenu;
+    background-color: skyblue;
+
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: skyblue;
+}
+}
+/*
+  Smartphone small 
+*/
+@media only screen 
+and (max-device-width: 360px) {
+    .top-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border:1px solid blue;
+    }
+    .top-menu a {
+        text-align: center;
+        width:100%;
+       
+        
+    }
+    .container{
+        display: flex;
+        font-size: small;
+        flex-direction: column;
+
+    }
+    .container >div{
+        border:2px solid green;
+      
+       }
+    .aside{
+        background-color: rgb(231, 118, 118);
+        width:100%;
+        
+    }
+    .aside > a{
+        display: block;
+         width: 100%;
+        background-color: tomato;
+    }
+    .aside2 > a{
+        display: block;
+        width: 100%;
+        background-color: tomato;
+        
+    }
+    .aside2{
+        display: block;
+        width: 100%;
+        background-color: rgb(138, 248, 243);
+        border:1px solid red;
+    }
+   }
+
+/*
+  Smartphone 
+*/
+@media only screen 
+and (min-device-width: 361px)
+and (max-device-width: 480px) {
+    .top-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .top-menu a {
+        text-align: center;
+        border: 2px solid white;
+    }
+    
+   }
+
+
+/* Laptop */
+@media only screen 
+and (min-device-width: 481px)
+and (max-device-width: 1823px) {
+    .container {
+        margin: 5%;
+    }
+    .top-menu {
+        display: flex;
+    }
+    .top-menu a {
+        margin-right: 10px;
+    }
+    .aside2 a{
+        float:none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Larger Devices*/
+@media only screen 
+and (min-width: 1824px) {
+    .container {
+        color: white;
+        background-color: rebeccapurple;
+        margin: 20%;
+    }
+}
