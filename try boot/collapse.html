@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title> Test Bootstrap</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="boot.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>hi,Bootstrap </title>
+</head>
+<body>
+<div class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-expand-lg" id="navbarTogglerDemo01">
+        <a class="navbar-brand navbar-toggler" href="#">Hidden brand</a>
+        <ul class="collapse navbar-nav mr-auto mt-2 mt-lg-0" id="menu">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">contact us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">See More</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">...</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar2" style="background-color: cornflowerblue;color: black;"
+        aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation"> menu
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="nav flex-column collapse  navbar-nav mr-auto mt-2 mt-lg-0" id="navbar2">
+        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </nav>
+</div>
+<div>
+    <button type="button" class="btn btn-outline-success navbar-toggler " data-target="#hide-img"
+        data-toggle="collapse">Click</button>
+    <img src="foto2.jpg" alt="foto2" id="hide-img" style="width: 100px; height: 100px;">
+</div>
+<div>
+    <button type="button" class="btn btn-primary btn-lg btn-block navbar-expand-lg navbar-toggler"
+        data-toggle="collapse" data-target="#image">Block level button</button>
+    <img src="foto4 (1).jpg" alt="photo" class="collapse " id="image" style="width: 100px; height: 100px;">
+    <button type="button" class="btn btn-secondary btn-lg btn-block navbar-expand-md navbar-toggler"
+        data-toggle="collapse" data-target="#para">Block level button</button>
+    <p class="collapse" id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis error illo
+        autem non culpa animi. Facilis, possimus vitae similique atque, maiores corrupti, eligendi omnis molestiae
+        tempore earum maxime sit?</p>
+</div>
+<!-- bootstrap grid .it has 12 column-->
+<div class="row" style="background-color: brown;">
+ Iam row
+</div>
+<div class="row" style="background-color: rgb(223, 126, 126);">
+    <div class="col">col 1</div>
+    <div class="col">col 2</div>
+    <div class="col">col 3</div>
+    <div class="col">col 4</div>
+    <div class="col">col 5</div>
+    <div class="col">col 6</div>
+    <div class="col">col 7</div>
+    <div class="col">col 8</div>
+    <div class="col">col 9</div>
+    <div class="col">col 10</div>
+    <div class="col">col 11</div>
+    <div class="col">col 12</div>
+   </div>
+   <!-- column grid for laptop or large device-->
+   <div class="row">
+       <div class="col-lg-2">col 1</div>
+       <div class="col-sm-8">col 2</div>
+       <div class="col-sm-2">col 3</div>
+   </div>
+     <!-- column grid for lg md sm xs devices-->
+  <!-- Grid bootstrap layout-->
+  <div class="container">
+    <!-- top-menu-->
+    <nav class="navbar  navbar-light bg-light">
+        <form class="form-inline">
+          <button class="btn btn-outline-success" type="button"><a href="#" class="col-xs-12 col-sm-12 col-md-6 col-lg-3">Top-menu 1</a></button>
+          <button class="btn btn-outline-success" type="button"><a href="#" class="col-xs-12 col-sm-12  col-md-6 col-lg-3">Top-menu 2</a></button>
+          <button class="btn btn-outline-success" type="button"><a href="#" class="col-xs-12 col-sm-12  col-md-6 col-lg-3">Top-menu 3</a></button>
+          <button class="btn btn-outline-success" type="button"><a href="#" class="col-xs-12 col-sm-12  col-md-6 col-lg-3">Top-menu 4</a></button>
+        
+        </form>
+      </nav>
+    <div class="row text-center">
+        <a href="#" class="col-xs- col-sm-  col-md- col-lg-">Top-menu 1</a>
+        <a href="#" class="col-xs-  col-sm- col-md- col-lg-">Top-menu 1</a>
+        <a href="#" class="col-xs-  col-sm- col-md- col-lg-">Top-menu 1</a>
+    </div>
+    <!--left-menu-->
+    <div class="row">
+        <div class="col-lg- text-center">
+            <ul class="nav flex-column">
+                <li><a href="">Left 1</a></li>
+                <li><a href="">Left 1</a></li>
+                <li><a href="">Left 1</a></li>
+            </ul>
+        </div>
+        <!-- content-->
+        <div class="col-lg-">Main Content</div>
+    </div>
+    <div class="row">
+        <!--Footer-->
+        <div class="col-lg-">Footer</div>
+    </div>
+</div>
+    <!-- Grid -->
+<!-- i use a card-->
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">card 1</h5>
+                <img src="foto4 (1).jpg" class="card-img-top" alt="photo">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">card 2</h5>
+                <img src="foto5 (2).jpg" class="card-img-top" alt="photo">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">card 3</h5>
+                <img src="foto6.jpg" class="card-img-top" alt="photo">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">card 4</h5>
+                <img src="foto4 (1).jpg" class="card-img-top" alt="photo">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- end the container-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then        Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Hello, grid bootstrap!</title>
+  <style>
+    nav>a {
+      background-color: rgb(224, 123, 123);
+    }
+
+    nav .row>a {
+      margin-left: 50px;
+    }
+
+    .card-img-top {
+      height: 250px;
+    }
+    .photo-table{
+      width: 50px;
+      height: 50px;
+      border-radius: 60%;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <!-- column grid for lg md sm xs devices-->
+  <!-- Grid bootstrap layout-->
+  <div class="container-fluid">
+    <!-- top-menu-->
+    <nav class=" row navbar  navbar-light bg-light text-center col-lg-12">
+      <div class="row text-center ">
+        <a href="#"  class="col-xs-12 col-sm-12  col-md-6 col-lg-2 active">HOME</a>
+        <a href="#" class="col-xs-12  col-sm-12 col-md-6 col-lg-2">Profile</a>
+        <a href="#" class="col-xs-12  col-sm-12 col-md-6 col-lg-2">Gallery</a>
+        <a href="#" class="col-xs-12 col-sm-12  col-md-6 col-lg-2">Contact us</a>
+        <a href="#" class="col-xs-12  col-sm-12 col-md-6 col-lg-2">About</a>
+        <a href="#" class="col-xs-12  col-sm-12 col-md-6 col-lg-2">More..</a>
+      </div>
+    </nav>
+
+
+    <!--left-menu-->
+    <div class="row">
+      <div class="col-lg-2 text-center">
+        <ul class="nav flex-column left-menu1" style="background-color: rgb(199, 207, 86);">
+          <li><a href="#"> <svg class="bi bi-music-note-beamed" width="1em" height="1em" viewBox="0 0 16 16"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" clip-rule="evenodd" />
+                <path d="M5 2.905a1 1 0 01.9-.995l8-.8a1 1 0 011.1.995V3L5 4V2.905z" />
+              </svg></a></li>
+          <li><a href="#"><svg class="bi bi-people-circle" width="1em" height="1em" viewBox="0 0 16 16"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 008 15a6.987 6.987 0 005.468-2.63z" />
+                <path fill-rule="evenodd" d="M8 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zM0 8a8 8 0 1116 0A8 8 0 010 8z"
+                  clip-rule="evenodd" />
+              </svg></a></li>
+          <li><a href="#"><svg class="bi bi-volume-up-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.536 14.01A8.473 8.473 0 0014.026 8a8.473 8.473 0 00-2.49-6.01l-.708.707A7.476 7.476 0 0113.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+                <path
+                  d="M10.121 12.596A6.48 6.48 0 0012.025 8a6.48 6.48 0 00-1.904-4.596l-.707.707A5.483 5.483 0 0111.025 8a5.483 5.483 0 01-1.61 3.89l.706.706z" />
+                <path
+                  d="M8.707 11.182A4.486 4.486 0 0010.025 8a4.486 4.486 0 00-1.318-3.182L8 5.525A3.489 3.489 0 019.025 8 3.49 3.49 0 018 10.475l.707.707z" />
+                <path fill-rule="evenodd"
+                  d="M6.717 3.55A.5.5 0 017 4v8a.5.5 0 01-.812.39L3.825 10.5H1.5A.5.5 0 011 10V6a.5.5 0 01.5-.5h2.325l2.363-1.89a.5.5 0 01.529-.06z"
+                  clip-rule="evenodd" />
+              </svg></a></li>
+        </ul>
+      </div>
+      <!-- content-->
+      <div class="col-lg-10">
+        <!-- i use table-->
+        <table class="table table-bordered table-sm table-hover">
+          <thead class="thead-dark">
+            <tr class="table-dark">
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-dark">
+              <td>Asreen</td>
+              <td>Ilyas</td>
+              <td>asreen@somemail.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table" ></td>
+            </tr>
+            <tr class="table-primary">
+              <td>nick</td>
+              <td>Joe</td>
+              <td>joe@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table"  ></td>
+            </tr>
+            <tr class="table-dark">
+              <td>john</td>
+              <td>Karim</td>
+              <td>john@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table"  ></td>
+            </tr>
+            <tr class="table-primary">
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table" ></td>
+            </tr>
+            <tr class="table-dark">
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo"class="photo-table"  ></td>
+            </tr>
+            <tr class="table-primary">
+              <td>bo</td>
+              <td>Refs</td>
+              <td>bo@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table" ></td>
+            </tr>
+            <tr class="table-dark">
+              <td>max</td>
+              <td>peterson</td>
+              <td>max@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table"  ></td>
+            </tr>
+            <tr class="table-primary">
+              <td>Sandy</td>
+              <td>Sanders</td>
+              <td>sandy@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table"  ></td>
+            </tr>
+            <tr class="table-dark">
+              <td>Lina</td>
+              <td>Angie</td>
+              <td>angie@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table" ></td>
+            </tr>
+            <tr class="table-primary text-dark">
+              <td>Derk</td>
+              <td>juli</td>
+              <td>derk@example.com</td>
+              <td> <img src="foto4 (1).jpg" alt="photo" class="photo-table" ></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+  <!-- i use a card-->
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">card 1</h5>
+          <img src="foto4 (1).jpg" class="card-img-top" alt="photo">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">card 2</h5>
+          <img src="foto5 (2).jpg" class="card-img-top" alt="photo">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">card 3</h5>
+          <img src="foto6.jpg" class="card-img-top" alt="photo">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">card 4</h5>
+          <img src="foto4 (1).jpg" class="card-img-top" alt="photo">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!--Footer-->
+    <div class="col-lg-12" style="background-color: cadetblue;text-align: center;">example.email@gmail.com 2020</div>
+  </div>
+  </div>
+  <!-- Grid -->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

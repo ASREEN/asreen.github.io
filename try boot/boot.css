@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(228, 235, 233)!important;
+}
+.container{
+
+    background-color: rgb(250, 128, 91);
+}
+.container> div{
+    margin:10px;
+}
+ .carosel-inner .carosel-item> .my-img {
+    width:100%;
+    height: 400px;
+    
+}
+button> a , .dropdown-menu >a{
+    width:300px;
+    background-color: rgb(218, 181, 127);
+}
+button> a {
+    padding-left: 20px;
+}
+li img{
+    width:200px;
+    border-radius: 40%;
+}
+h1 {
+    text-align: center;
+    color:brown;
+}
+nav{
+    background-color: black;
+}
+div .slide div .carousel-item>item{
+    height: 300px;
+}
+.card-img-top{
+    height: 200px;
+}
+.w-100{
+    height: 400px;
+    width: 70%!important;
+}
+.col{
+    border:2px solid black;
+}

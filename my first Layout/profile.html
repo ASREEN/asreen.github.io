@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--google icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Main Profile</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- External CSS or Scripts -->
+    <script src="https://kit.fontawesome.com/42272163ad.js" crossorigin="anonymous"></script>
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+    <!--load all styles -->
+    <style>
+        
+        div img {
+            width: 500px;
+            height: 915px;
+        }
+
+        section {
+            display: flex;
+            padding-top: 10px;
+
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          height: 800px;
+            width:550px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+            padding-top: 5px;
+        }
+
+        button:hover,a:hover {
+            opacity: 0.7;
+        }
+        header{
+           background-color: rgb(27, 21, 21);
+           color: white;
+       }
+       div nav .header a {
+        background-color: rgb(58, 39, 39);
+        color: white;
+        
+        
+      }
+      .topnav nav a{
+          background-color: rgb(54, 46, 33);
+          color: white;
+          
+      }
+     .active{
+       background-color: rgb(197, 90, 108);
+     }
+     
+     .header  .logo img {
+     float: left;
+     width: 70px;
+     height: 70px;
+     background: #555;
+     border-radius: 50%;
+     margin-left: 10px;
+     margin-bottom: 5px;
+}
+div .header{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0px;
+    height: 70px;
+}
+h4{
+    background-color: cadetblue;
+}
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <!-- Start Header Part-->
+        <div>
+            <header>
+                <h4>www.asreen-webdevelopment.com</h4>
+                <!--Top Menu navigation-->
+                
+                <div class="topnav header">
+                    <div class="logo">
+                        <img src="logo1.png" alt="logo" >
+                    </div>
+                    <nav style="align-self: flex-end;">
+                        <a class="active" href="index.html">Home</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">My Works</a>
+                        <a href="profile.html">Contact Me</a>
+                        <a href="#myworks">My Code</a>
+
+                    </nav>
+                </div>
+            </header>
+            <!-- End Header Part-->
+
+            <!-- Start Main Content Part-->
+            <main>
+                <!--left side menu-->
+                <div class="aside">
+                    <aside>
+                        <div class="aside">
+                            <ul>
+                                <li>
+                                    <a href="index.html#about">About us</a>
+
+                                </li>
+                                <li>
+                                    <a href="profile.html">profile</a>
+                                </li>
+                                <li>
+                                    <a href="profile.html">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="index.html#infos">Infos</a>
+                                </li>
+                                <li>
+                                    <a href="index.html#myworks">Works</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="index.html#history">History</a>
+                                </li>
+                                <li>
+                                    <a href="profile.jpg">Photo</a>
+                                </li>
+                                <li>
+                                    <a href="#more">More</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="icons">
+                            <a href="#"><span class="material-icons">assignment_ind</span></a>
+                            <a href="profile.html"><i class="fas fa-address-card"></i></a>
+                            <a href="profile.html"> <i class="fas fa-user"></i> </a><!-- uses solid style -->
+                            <a href="profile.html"> <i class="fas fa-address-card"></i></a>
+                            <a href="profile.html"><span class="material-icons">contacts</span></a>
+                            <a href="#"><span class="material-icons">ring_volume</span></a>
+                           <a href="#"><span class="material-icons">build<span></a>
+
+                        </div>
+                    </aside>
+
+                    <!-- content here-->
+                    <section>
+                        
+                        <div>
+                            <img src="profile.jpg">
+                        </div>
+                        <div>
+                            <h2 style="text-align:center">My Profile Card</h2>
+
+                            <div class="card">
+                                <img src="profile.jpg" alt="foto" style="width:300px; height: 200px;">
+                                <h1>Asreen Ilyas</h1>
+                                <p class="title">Asreen Ilyas,Computer Teacher </p>
+                                <p>Musel University</p>
+                                <p>Bachelor:Computer and Mathmatic Science</p>
+                                <p>Webdeveloper</p>
+                                <p>Study at DCI</p>
+                                <p>Adress: Musterstraße 111,40987 Mustercity</p>
+                                <p>Germany</p>
+                                <div style="margin: 24px 0;" id="cantact">
+                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <p><button>Contact</button></p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <!-- End Main Content Part -->
+
+            <!-- Start Footer Part -->
+            <footer>
+                <p>Welcome to my website. This is a test layout site</p>
+                <p>Copyright @asreen, 2020</p>
+                <div>Contact me:<a href="#" style="color: white;"><span class="material-icons">email</span></a></div>
+            </footer>
+            <!-- End of Footer Part -->
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+body {
+    background-color: grey;
+}
+.container {
+    background-color: rgb(147, 173, 212);
+    margin: 10%;
+}
+h4{ padding-top: 10px;
+    text-align: center;
+    background-color: cadetblue;
+}
+.header{
+    background-color: rgb(27, 21, 21);
+    color: white;
+}
+
+
+
+aside {padding-top:50px;
+      background-color: rgb(177, 207, 219);
+      color: white;
+      width: 30%;
+  
+   }
+.aside{
+    display: flex;
+    
+   
+}
+div .aside ul li {
+    text-decoration: none;
+    list-style-type:none;
+    padding:7px;
+    color: black;
+    border: 2px solid rgb(119, 58, 8);
+   
+}
+div .aside ul li a{
+    width: 40px;
+}
+section{
+    padding-left: 10px;
+    font-size: 20pt;
+}
+
+.topnav ul {
+    float:left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color:white;
+   
+  }
+  
+.topnav li {
+    text-align: center;
+    border: 2px solid rgb(119, 58, 8);
+      
+       }
+  
+.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    
+  
+  }
+     .active {
+    background-color: #4CAF50;
+  }
+
+footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+div .icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+div .icons a  {
+    background-color: rgb(202, 215, 230);
+    color: rgb(110, 78, 29);
+    font-size: 20pt;
+    padding-top: 20px;
+   
+}
+.topnav nav a{
+    background-color: rgb(13, 58, 100);
+    margin-left: 10px;
+    padding-left: 10px;
+    color: white;
+    width: 15px;
+    height: 10px;
+  
+}
+.header  .logo img {
+    float: left;
+    width: 70px;
+    height: 70px;
+   background: #555;
+   border-radius: 50%;
+   
+   align-self: flex-start;
+}
+div .header{
+        display:flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin-top: 0px;
+        padding-bottom: 10px;
+}
+nav a {
+    width: 30px;
+
+
+}
+.topnav nav a{
+    background-color: rgb(80, 139, 187);
+    color: white;
+}
+
