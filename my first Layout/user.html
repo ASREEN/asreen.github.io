@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Form learning!</title>
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+
+        .container {
+            background-image: url(/wall.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: white;
+            border: 3px solid #aaa;
+        }
+
+        h1,
+        h6 {
+            text-align: center;
+            color: cadetblue;
+        }
+
+        .logo {
+            float: left;
+            border-radius: 60%;
+            width: 100px;
+            height: 100px;
+        }
+
+        footer {
+            font-size: x-large;
+            font-weight: bold;
+            text-align: center;
+        }
+        option:first-child{
+            color:red;
+        }
+        option:last-child{
+            color:rgb(105, 180, 34);
+        }
+        option:nth-child(2){
+            color:rgb(202, 47, 169);
+        }
+        option:nth-child(3){
+            color:rgb(74, 138, 146);
+        }
+        option:nth-child(4){
+            color:rgb(77, 22, 22);
+        }
+        option:nth-child(5){
+            color:rgb(136, 150, 73);
+        }
+        option:nth-child(odd){
+            color:crimson;
+        }
+        option:nth-child(even){
+            color:rgb(13, 25, 80);
+        }
+        ul>li:nth-child(odd){
+            color:darkgoldenrod;
+            
+        }
+        ul>li:nth-child(even){
+            color:rgb(11, 184, 155);
+            
+        }
+        label [for]{
+            color:blue;
+            border:3px solid red;
+        }
+        div .test{
+            background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url('./animal.jpg');
+
+        }
+        .test :not(h3) {
+            color: rgb(9, 107, 17);
+        }
+        div>h3{
+            color:red;
+            padding: 20px 20px;
+        }
+        div>h3::before{
+            color:blue;
+            position:relative;
+            content: 'i use Pseudo Element before.......';
+           
+        }
+       div> h3::after{
+           color:green;
+           position:relative;
+            content:' ........i use Pseudo Element after ';
+       }
+       div>p::first-letter{
+           color:hotpink;
+           font-size: larger;
+       }
+       div>p::first-line{
+           color:rgb(105, 200, 255);
+           font-size: larger;
+       }
+       div>p::selection{
+           color:rgb(197, 250, 4);
+           background-color: tomato;
+           font-size: larger;
+       }
+       div>p{
+           padding: 50px 50px;
+           color:white;
+           background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(214, 94, 94, 0.6)),
+           url("./logo3.png") center/cover no-repeat fixed ;
+           border-radius: 10%;
+           height: 200px;
+
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div><img src="logo3.png" alt="logo" class="logo">
+                <h1>Hi,iam Asreen !</h1>
+                <h6>fill those fields,please </h6>
+            </div>
+        </div>
+        <br> <br>
+        <!-- contact form-->
+        <form action="/action_page.php" class="was-validated" >
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="uname">First Name:</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter firstname" name="uname"
+                        required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="uname">Last Name:</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter lastname" name="uname"
+                        required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" class="form-control" placeholder="How old are you?"
+                        min="18" max="100">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter  email" name="email"
+                        placeholder="Email" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"
+                        required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="birthdaytime">Birthday (date and time):</label>
+                <input class="form-control" type="datetime-local" id="birthdaytime" name="birthdaytime"
+                    placeholder="Enter your birthday" required!>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="phone">Enter your phone number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control"
+                    placeholder="Enter phone number">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="country">Country:</label>
+                    <select name="country" id="country">
+                        <option value="AF">Germany</option>
+                        <option value="AX">Åland Islands</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antarctica</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="con">PLZ:</label>
+                    <input type="text" maxlength="5" class="form-control" id="con" placeholder="Enter country"
+                        name="con">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="con">City:</label>
+                    <input type="text" class="form-control" id="con" placeholder="Enter country" name="con">
+
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group form-check">
+                <div>
+                    <label for="gender" class="form-check-label form-row"> <b> Gender:</b> <br>
+                        <div class="col-md-1">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" id="other" name="gender" value="other"> 
+                            <label for="other">Other</label>
+                        </div>
+                    </label>
+                </div>
+                <br><br><br>
+                <div>
+                    <div class=" col-md-3">
+                        <label for="img">image:</label>
+                        <input type="image" id="img" name="img" src="logo3.png" alt="logo" width="100" height="100">
+                    </div>
+                </div>
+                <br><br>
+                <div class=" col-md-6">
+                    <label for="favcolor">Select your favorite color:</label>
+                    <input type="color" id="favcolor" name="favcolor" value="#af1f1f">
+                </div>
+            </div>
+            <br><br>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" required> I agree the conditions.
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                </label>
+            </div>
+            <br><br>
+            <div class="form-row form-group">
+                <label for="vol">Rate my page(between 0 and 50):</label>
+                <div class="col-md-4" style="background-color: rgb(43, 46, 46);">
+
+                    <input class="form-control" type="range" id="vol" name="vol" min="0" max="50">
+                </div>
+            </div>
+
+            <br>
+            <div class="form-row form-group">
+                <div class="col-md-8">
+                    <label for="text1">Weite something:</label>
+                    <textarea class="form-control" type="text" id="text1" placeholder="Weite something..." rows="3"
+                        style="color: teal;">
+                 </textarea>
+                </div>
+            </div>
+            <ul style="display: flex;justify-content: space-around;font-size: larger;">
+                <li>link1</li>
+                <li>link2</li>
+                <li>link3</li>
+                <li>link1</li>
+                <li>link2</li>
+                <li>link3</li>
+            </ul>
+          <div class="test">
+            <h2> h2 Hello</h2>
+            <h3>h3 Hello</h3>
+            <h4>h4 Hello</h4>
+          </div>
+          <div><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, exercitationem laudantium magni cupiditate autem nobis natus quo maxime reiciendis doloribus distinctio esse voluptates beatae hic necessitatibus ipsam rerum! Voluptatum, exercitationem?</p></div>
+
+            <br><br><br>
+            <div style="padding: 10px;">
+                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
+    </div>
+    <!--end container-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+<footer>
+    Copyright Asreen 2020
+</footer>
+
+</html>
