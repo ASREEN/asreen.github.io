@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title> Use Methods </title>
+    <style>
+        body {
+            background-color: rgb(202, 66, 41);
+        }
+
+        .container {
+            margin-top: 50px;
+            height: auto;
+            margin-bottom: 100px;
+        }
+
+        input {
+            margin-top: 55px;
+        }
+
+        button {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        canvas{
+            margin-left: 30px;
+        }
+      
+    </style>
+</head>
+
+<body>
+
+    <div class="container bg-dark">
+        <section>
+            <div class="font-italic">
+                <!--   chang the name  -->
+                <button class="btn btn-primary" onclick="changeName(newName.value)" id="btn1">Change the Name</button>
+                <input type="text" id="newName" placeholder="Enter any name">
+                <p class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="showText">Story</p>
+                <hr>
+                <!--    sperate lines   -->
+                <button class="btn btn-primary" onclick="putArray()">Seperate Lines</button>
+                <p class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="showText2">Story</p>
+                <hr>
+                <!-- push new line -->
+                <button class="btn btn-primary" onclick="addText()">Add new Lines</button>
+                <p class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="showText3">Story</p>
+                <hr>
+                <button class="btn btn-primary" onclick="splitString(s.value)">See Result</button>
+                <input class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="s" placeholder="Sperator"></input>
+                <p class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="showText4">Story</p>
+                <hr>
+                 <!-- see random number -->
+                <button class="btn btn-primary" onclick="anyNum()">Random(0-1)</button>
+                <button class="btn btn-primary" onclick="anyNum2()">Random(0-99)</button>
+                <input class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="randomN" placeholder="Random number">
+                <p class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="showText5"></p>
+                <hr>
+                <!--    circle  -->
+                <button class="btn btn-primary" onclick="getCircle(r.value)">Circle</button>
+                <input class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="r" value='0' placeholder="input a number">
+                <button class="btn btn-primary" onclick="fillCircle(r.value)">fill Circle</button>
+                <div class="font-weight-bold p-3 mb-2 bg-warning text-dark" id="showText6"></div>
+                <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+
+
+            </div>
+        </section>
+
+
+    </div>
+    <script src="ex14.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

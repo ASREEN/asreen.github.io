@@ -1,0 +1,30 @@
+ section {  margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+ #btn1 {
+            color: rgb(230, 230, 230);
+            font-size: 20px;
+            padding: 20px;
+            text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            background: rgb(175, 126, 126);
+            background: linear-gradient(0deg, rgb(204, 103, 103) 30%, rgb(109, 103, 103) 70%);
+            -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+        }
+    body{
+        background: rgb(30, 186, 230);
+        background: -webkit-linear-gradient(30deg, rgb(143, 112, 72) 30%, rgb(123, 156, 228) 70%);
+        background: linear-gradient(120deg, rgb(89, 136, 36) 30%, rgb(16, 46, 112) 70%);
+        color:rgb(119, 11, 56);
+        font-size: 25px;
+        text-shadow: 3px 5px 6px rgb(20, 12, 12);
+        text-align: justify;
+    }
+    input{
+        background-color: rgb(207, 235, 150);
+        color:black;
+    }

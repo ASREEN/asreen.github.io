@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <link rel="stylesheet" href="arrow.css">
+</head>
+
+<body>
+    <section>
+        <input type="text" id="d1" placeholder="Input any number">
+        <input type="text" id="d2" placeholder="Input any number">
+        <button type="button" id="btn1" onclick="myFunc(d1.value,d2.value)">See result</button>
+        <button type="button" id="btn1" onclick="erase()">Reset</button>
+    </section>
+    <div id="result"></div>
+    <section>
+        <input type="text" id="userN" placeholder="See User info">
+        <button type="button" id="btn1" onclick="userFunc(userN.value)">Choose user</button>
+    </section>
+    <section>
+        <p>The Information for all users</p>
+        <button type="button" id="btn1" onclick="allUser()">All users</button>
+
+    </section>
+
+    <div id="info"></div>
+    <script src="arrow.js"></script>
+</body>
+
+</html>

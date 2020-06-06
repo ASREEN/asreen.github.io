@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Card</title>
+    <style>
+        img{
+            width: 400px;
+            height: 300px;
+            
+        }
+        .card {
+            
+            margin: 100px 200px;
+            min-height: 17rem;
+            position: relative;
+            perspective: 1500px;
+        }
+
+        .card-side {
+            backface-visibility: hidden;
+            transition: all 1.5s ease-in;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+        }
+
+        .card-back {
+            background:linear-gradient( blue ,green) ;
+            border:3px double rgb(151, 21, 21);
+            width: 400px;
+            height: 300px;
+            transform: rotateY(180deg);
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .card:hover .card-front {
+            transform: rotateY(-180deg);
+        }
+
+        .card:hover .card-back {
+            transform: rotateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-side card-front">
+            <img src="/js1/images/autumn.jpg" alt="autumn"/>
+        </div>
+        <div class="card-side card-back">
+            <h4>Autumn:</h4> <br>
+            <b>September</b> <br>
+            <b>October</b> <br>
+            <b>November</b><br />
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</body>
+
+</html>
