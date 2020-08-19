@@ -1,0 +1,14 @@
+#cardMovi{
+    border: 5px ridge yellow;
+    background-color: black;
+    color:red;
+    width:500px;
+}
+#imgID{
+    height: 400px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+body{
+    font-weight: 400;
+}
