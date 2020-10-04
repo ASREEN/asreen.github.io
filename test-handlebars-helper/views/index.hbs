@@ -1,0 +1,48 @@
+{{pageTitle}}
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col" class="text-danger">#</th>
+      <th scope="col" class="text-danger">name</th>
+      <th scope="col" class="text-danger">email</th>
+      <th scope="col" class="text-danger">phone</th>
+      <th scope="col" class="text-danger">website</th>
+      <th scope="col" class="text-danger">address</th>
+      <th scope="col" class="text-danger">company</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row" class="text-danger"><a href="/user/{{id}}">{{id}}</a></th>
+      <td class="text-info"> {{big name}}</td>
+      <td class="text-info">{{email}}</td>
+      <td class="text-info">{{phone}}</td>
+      <td class="text-info">{{website}}</td>
+      <td>
+        <ul>
+          {{#each address}}
+          {{#if @last}}
+          {{!-- {{log "debug logging" this}} --}}
+          {{#each this}}
+            <li><strong class="text-info">{{@key}}</strong> : <u class="text-warning">{{this}}</u></li>
+          {{/each}}
+          {{else}}
+          <li><strong class="text-info">{{@key}}</strong> : <u class="text-warning">{{this}}</u></li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          {{#each company}}
+          <li><strong class="text-info">{{@key}}</strong> : <u class="text-warning">{{this}}</u></li>
+          {{/each}}
+        </ul>
+      </td>
+
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

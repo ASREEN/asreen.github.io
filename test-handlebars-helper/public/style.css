@@ -1,0 +1,9 @@
+body{
+    background-image: linear-gradient(rgb(223, 46, 22) 70%,rgb(231, 52, 28));
+    font-weight: 400;
+    color:rgb(243, 243, 250);   
+}
+ul,li{
+    text-decoration: none;
+    list-style-type: none;
+}

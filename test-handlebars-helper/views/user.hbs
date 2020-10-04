@@ -1,0 +1,42 @@
+<div class="card w-75 text-center m-auto bd-info p-3  bg-warning text-dark ">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">name</th>
+                <th scope="col">email</th>
+                <th scope="col">phone</th>
+                <th scope="col">website</th>
+                <th scope="col">address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#with user}}
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td>{{website}}</td>
+                <td>
+                    <ul>
+                        {{#each address}}
+                         {{#ifeq @key "geo"}}
+                            {{log "debug logging" geo}}
+                          {{#each this}}
+                           {{log "debug logging" this}}
+                           <li><strong class="text-danger">{{@key}}</strong> : <u class="text-info">{{this}}</u></li>
+                           {{/each}}
+                         {{/ifeq}}
+                         {{#ifnoteq @key "geo"}}
+                          {{log "debug logging" this}}
+                          <li><strong class="text-danger">{{@key}}</strong> : <u class="text-info">{{this}}</u></li>
+                         {{/ifnoteq}}
+                        {{/each}}
+                    </ul>
+                </td>
+            </tr>
+            {{/with}}
+        </tbody>
+    </table>
+</div>
