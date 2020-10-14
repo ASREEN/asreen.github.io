@@ -1,0 +1,43 @@
+<div class="container-fluid">
+   <section class="text-lg">
+      <button class="btn btn-warning" onclick="showUsers()" style="margin-left: 640px; margin-top:20px">Get Users Data
+         from API
+      </button>
+      <table class="table m-auto  table-striped table-dark">
+         <thead>
+            <tr>
+               <th>User ID</th>
+               <th>User Name</th>
+               <th>User email</th>
+               <th>Address</th>
+               <th>Action</th>
+            </tr>
+         </thead>
+         <tbody></tbody>
+      </table>
+   </section>
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title text-info" id="exampleModalScrollableTitle">User Details</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+               ....
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/javascripts/main.js"></script>

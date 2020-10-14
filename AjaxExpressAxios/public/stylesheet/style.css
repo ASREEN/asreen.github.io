@@ -1,0 +1,20 @@
+#search {
+    text-align: center;
+    width:500px;
+    height: 70px;
+    font-size:3.5em;
+    border-radius:8px;
+    margin: 200px 200px;
+  }
+  .modal{
+    height: auto;
+    
+  }
+  .modal-body{
+    background: rgba(128, 128, 128, 0.356);
+  }
+  body{
+    background-image: linear-gradient(gray,pink,purple);
+    background-repeat: no-repeat;
+    height: 1000px;
+  }
