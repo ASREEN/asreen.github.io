@@ -162,11 +162,11 @@
                      <a href="/seeMoreInfo/{{_id}}"><img src="/{{imagePath}}" class="card-img-top"
                            style="height: 300px;" alt="toy"></a>
                      <div class="card-body">
-                        <h5 class="card-text text-danger">Sale/Buy:</h5> {{saleBuy}}
                         <h3 class="card-title text-danger text-bild text-uppercase" id="qty_{{_id}}">{{proName}}</h3>
-                        <h5 class="card-text text-info">Price: {{price}}€</h5>
-                        <h4 class="card-text">Category:{{category}}</h4>
-                        <h4 class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</h4>
+                        <h5 class="card-text text-info">Price: {{price}}€ (inkl. MwSt)</h5>
+                        <p class="card-text">Category:{{category}}</p>
+                        <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p> 
+                        <p class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</p>
                         <p class="card-text">Description :{{description}}</p>
                         <button class="btn" id="favoriteButton_{{_id}}" onclick="addFavorite('{{_id}}','{{proName}}')"
                            style="position:absolute; top: 0; right: 0; z-index: 10; color: grey; font-size: 1rem;">
@@ -197,15 +197,14 @@
                      <a href="/seeMoreInfo/{{_id}}"><img src="/{{imagePath}}" class="card-img-top"
                            style="height: 300px;" alt="toy"></a>
                      <div class="card-body">
-                        <h4 class="card-text text-danger">Sale/Buy:</h4> {{saleBuy}}
                         <h3 class="card-title text-danger text-bild text-uppercase" id="qty_{{_id}}">{{proName}}</h3>
-                        <h4 class="card-text text-info">Price: {{price}}€</h4>
-                        <h4 class="card-text">Category:{{category}}</h4>
-                        <h4 class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</h4>
+                        <p class="card-text">Category:{{category}}</p>
+                        <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p> 
+                        <p class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</p>
                         <p class="card-text">Description :{{description}}</p>
-                        <a href="/sendMsgProvider" class="btn btn-success m-1">contact with provider</a>
+                        <a href="/sendMsgProvider" class="btn btn-success m-1">contact with the person</a>
                         <form action="/addComment/{{_id}}/{{proName}}" class="d-flex" method="POST">
-                           <textarea class="m-1" name="comment" id="comment" cols="20" rows="2"
+                           <textarea class="m-1" name="comment" id="comment" cols="24" rows="2"
                               placeholder="Leave a comment"></textarea>
                            <button class="btn" type="submit">submit</button>
                         </form>

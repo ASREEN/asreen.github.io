@@ -7,6 +7,7 @@ const dotenv = require('dotenv').config();
 const hbs = require('hbs');
 const Toy = require('./model/toys')
 const User = require('./model/users');
+const ContactInfo = require('./model/contact');
 const sendEmail = require('./utils/sendEmail')
 const output = require('./public/outputEmail')
 const Email = require('./model/emailModel')
@@ -87,30 +88,30 @@ app.get("/about", (req, res) => {
   res.render('about', { title: 'about-page' })
 })
 app.get("/contact", (req, res) => {
-  res.render('contact', { title: 'contact-page' })
+  res.render('contact', { title: 'contact-page',msg:req.flash('msg') })
 })
 app.get("/payment", (req, res) => {
   res.render('payment', { title: 'payment-page' })
 })
 app.get("/shop", (req, res) => {
-  let buyItems=[];
-  let saleItems=[];
+  let buyItems = [];
+  let saleItems = [];
   Toy.find((err, data) => {
     if (err) console.log(err)
     else {
-      data.map(item=>{
-        if(item.saleBuy=='buy'){buyItems.push(item)}
+      data.map(item => {
+        if (item.saleBuy == 'buy') { buyItems.push(item) }
         else saleItems.push(item)
       })
       // console.log('products',data)
-      res.render('shop', { title: 'shop-page', toySale: saleItems,toyBuy:buyItems })
+      res.render('shop', { title: 'shop-page', toySale: saleItems, toyBuy: buyItems })
     }
   })
 })
-app.get('/seeMoreInfo/:id',(req, res) => {
-  let id=req.params.id; 
+app.get('/seeMoreInfo/:id', (req, res) => {
+  let id = req.params.id;
   // console.log('id',id);
-  Toy.findById(id,(err, data) => {
+  Toy.findById(id, (err, data) => {
     if (err) console.log(err)
     else {
       // console.log('products',data)
@@ -171,7 +172,6 @@ app.get("/account", (req, res) => {
       console.log("data", data)
       res.render('account', { user: data, title: 'Account page' })
     })
-
   }
   else {
     req.flash('msg', 'please try to login first')
@@ -189,7 +189,6 @@ app.post("/signup", uploadPic.single('avatar'), function (req, res) {
     imagePath: 'uploads/' + file.filename,
     ...userInfo
   }
-  //console.log(userObject)
   let newUser = new User(userObject);
   newUser.save(() => { console.log('Data is saved in DB') })
   res.render("Login", { title: 'login-page', name: req.body.uname });
@@ -246,8 +245,8 @@ app.post('/sendMsgProvider', (req, res) => {
     console.log('new contact user', newEmail);
   });
   sendEmail(
-    to = 'asreen.ilyas66@gmail.com',//newEmail.email
-    from = 'asreen.ilyas66@gmail.com',
+    to = 'ilyasasreen@gmail.com',//newEmail.email
+    from = 'ilyasasreen@gmail.com',
     subject = 'Offer a price',
     html = output(name, email, message)
   );
@@ -256,43 +255,57 @@ app.post('/sendMsgProvider', (req, res) => {
   res.redirect('/sendMsgProvider')
   msgEmail = false;
 })
-app.post('/searchItem',(req,res)=>{
-  let items=[]
-  let item=req.body.search;
-  console.log('item',item)
-  Toy.find((err,data)=>{
+app.post('/searchItem', (req, res) => {
+  let items = []
+  let item = req.body.search;
+  console.log('item', item)
+  Toy.find((err, data) => {
     if (err) throw err;
-    data.map(toy=>{
-      if(toy.category==item || toy.proName==item){
-        console.log( toy.category , toy.proName , item)
+    data.map(toy => {
+      if (toy.category == item || toy.proName == item) {
+        console.log(toy.category, toy.proName, item)
         items.push(toy)
       }
     })
-    if(items!==[]) {
-      console.log('array items',items)  
-      res.render('shop',{toy:items});
+    if (items !== []) {
+      console.log('array items', items)
+      let itemsBuy=[], itemsSale=[];
+      for(let item of items){
+        if (item.saleBuy=='buy') itemsBuy.push(item);
+        else itemsSale.push(item)
+      }
+      res.render('shop', { toyBuy: itemsBuy,toySale:itemsSale});
     }
-    else alert('1')
-    
+    else console.log('no such item')
   })
 })
-app.post('/sendContactEmail',(req,res)=>{
-  let email=req.body.email;
-  let newEmail=new contactEmail({email})
-  newEmail.save((err,data)=>{
-    if (err) throw err ;
-    console.log('email saved in DB',data)
+app.post('/sendContactEmail', (req, res) => {
+  let email = req.body.email;
+  let newEmail = new contactEmail({ email })
+  newEmail.save((err, data) => {
+    if (err) throw err;
+    console.log('email saved in DB', data)
     res.redirect('/contact')
   })
 })
-app.post('/addComment/:id/:proName', function(req, res) {
-    let newComment = new Comment({comment: req.body.comment,product_name:req.params.proName});
-      newComment.save(function(err,data) {
-      if(err) throw err
-      console.log('comment saved in DB')
-      res.redirect('/shop');
-      });
+app.post('/addComment/:id/:proName', function (req, res) {
+  let newComment = new Comment({ comment: req.body.comment, product_name: req.params.proName });
+  newComment.save(function (err, data) {
+    if (err) throw err
+    console.log('comment saved in DB')
+    res.redirect('/shop');
+  });
 });
+app.post('/contact', (req, res) => {
+  let { name, email, phone, message } = req.body;
+  let newContact = new ContactInfo({ name, email, phone, message });
+  newContact.save((err, data) => {
+    if (err) throw err;
+    console.log('Contact Information saved in DB')
+    req.flash('msg', 'Thank you , we will contact with you soon...')
+    res.redirect('/contact')
+  })
+})
 // listen to the PORT 4000
 app.listen(PORT, () => {
   console.log('The server listining to port ', PORT)
