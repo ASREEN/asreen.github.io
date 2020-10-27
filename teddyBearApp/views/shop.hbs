@@ -165,10 +165,10 @@
                         <h3 class="card-title text-danger text-bild text-uppercase" id="qty_{{_id}}">{{proName}}</h3>
                         <h5 class="card-text text-info">Price: {{price}}€ (inkl. MwSt)</h5>
                         <p class="card-text">Category:{{category}}</p>
-                        <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p> 
+                        <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p>
                         <p class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</p>
                         <p class="card-text">Description :{{description}}</p>
-                        <button class="btn" id="favoriteButton_{{_id}}" onclick="addFavorite("{{_id}}",'{{proName}}')"
+                        <button class="btn" id="favoriteButton_{{_id}}" onclick="addFavorite('{{_id}}','{{proName}}')"
                            style="position:absolute; top: 0; right: 0; z-index: 10; color: grey; font-size: 1rem;">
                            <i class="fas fa-heart"></i>
                         </button>
@@ -199,7 +199,7 @@
                      <div class="card-body">
                         <h3 class="card-title text-danger text-bild text-uppercase" id="qty_{{_id}}">{{proName}}</h3>
                         <p class="card-text">Category:{{category}}</p>
-                        <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p> 
+                        <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p>
                         <p class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</p>
                         <p class="card-text">Description :{{description}}</p>
                         <a href="/sendMsgProvider" class="btn btn-success m-1">contact with the person</a>
