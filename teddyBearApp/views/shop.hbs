@@ -168,13 +168,13 @@
                         <p class="card-text text-danger">Sale/Buy:<b class="text-dark">{{saleBuy}}</b></p> 
                         <p class="card-text"><b class="text-danger">Item status:</b>{{ItemStatus}}</p>
                         <p class="card-text">Description :{{description}}</p>
-                        <button class="btn" id="favoriteButton_{{_id}}" onclick="addFavorite('{{_id}}','{{proName}}')"
+                        <button class="btn" id="favoriteButton_{{_id}}" onclick="addFavorite("{{_id}}",'{{proName}}')"
                            style="position:absolute; top: 0; right: 0; z-index: 10; color: grey; font-size: 1rem;">
                            <i class="fas fa-heart"></i>
                         </button>
                         <a href="#" class="btn float-left"
                            style="position:absolute; top: 0; left: 0; z-index: 10;color:rgb(24, 161, 207);"
-                           onclick="orderButton('{{proName}}')"><i class="fas fa-cart-plus"></i></a>
+                           onclick="orderButton('{{proName}}',{{price}})"><i class="fas fa-cart-plus"></i></a>
                         <a href="/sendMsgProvider" class="btn btn-success m-1">contact with provider</a>
                         <form action="/addComment/{{_id}}/{{proName}}" class="d-flex" method="POST">
                            <textarea class="m-1" name="comment" id="comment" cols="20" rows="2"
@@ -204,7 +204,7 @@
                         <p class="card-text">Description :{{description}}</p>
                         <a href="/sendMsgProvider" class="btn btn-success m-1">contact with the person</a>
                         <form action="/addComment/{{_id}}/{{proName}}" class="d-flex" method="POST">
-                           <textarea class="m-1" name="comment" id="comment" cols="24" rows="2"
+                           <textarea class="m-1" name="comment" cols="24" rows="2"
                               placeholder="Leave a comment"></textarea>
                            <button class="btn" type="submit">submit</button>
                         </form>
