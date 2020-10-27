@@ -1,0 +1,46 @@
+<form action="/updateUser/{{userId}}">
+    {{#if msg}}
+    <div class="alert alert-warning w-50 mt-3" role="alert"> {{msg}} </div>
+    {{/if}}
+    <div class="container w-100">
+        {{#with userData}}
+        <div class="row  w-100 m-auto">
+            <div class="col-sm-12 p-2 mt-4">
+                <form action="/updateUser/:{{_id}}" method="POST">
+                    <div class="card m-auto" style="width: 100%;">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="text-info">First Name</label>
+                                <input type="text" class="form-control" name="uFname" id="uFname" value="{{uFname}}">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-info">Last Name</label>
+                                <input type="text" class="form-control" name="uSname" id="uSname" value="{{uSname}}">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-info">user name</label>
+                                <input type="text" class="form-control" name="uname" id="uname" value="{{uname}}">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-info" for="role">user email:</label>
+                                <input type="text" class="form-control" name="email" id="quantity" value="{{email}}">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-info" for="role">user password:</label>
+                                <input type="text" class="form-control" name="pswd" id="pswd" value="{{pswd}}">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-info" for="role">Role:</label>
+                                <input type="text" class="form-control" name="role" id="role" value="{{role}}">
+                            </div>
+
+                            <button type="submit" class="myButton3">Update</button>
+                            {{!-- <button type="submit" class="btn btn-primary">Update</button> --}}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+</form>
