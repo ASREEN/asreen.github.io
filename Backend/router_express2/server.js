@@ -12,7 +12,7 @@ app.use('/customers', customers);
 //Application Level Middleware
 function middelware1(req, res, next) {
   if (req.url == '/admin') next()
-  else res.send('you have no permission to access my page')
+  else res.send('you hane no permission to access my page')
 }
 app.get('/admin', middelware1, (req, res) => {
   res.send('<h1>I am the admin </h1>')
