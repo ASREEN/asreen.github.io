@@ -1,0 +1,31 @@
+{
+  "name": "teddybearapp",
+  "version": "1.0.0",
+  "description": "Create a online shopping website where customer can buy and sell products and upload products info",
+  "main": "profile page upload his/her picture",
+  "scripts": {
+    "test": "server.js",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "sale",
+    "buy",
+    "shop"
+  ],
+  "author": "Asreen",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.10.15",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6"
+  }
+}
