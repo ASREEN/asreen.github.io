@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  background-image: url("/assets/img/img10.jpg");
+  background-image: url(../img/meinFoto.jpg);
   background-color: #312b2bb6;
   background-position:center;
   background-repeat: no-repeat;
